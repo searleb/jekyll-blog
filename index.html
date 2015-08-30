@@ -2,17 +2,38 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="projects">
+    <h2>Recent Projects</h2>
+    {% for post in site.posts %}
+        {% if post.category == 'project' %}
+            <div class="row">
+                <article class="project">
+                {% capture thecycle %}{% cycle 'odd', 'even '%}{% endcapture %}
+                {% if thecycle == 'odd' %}
+                    <div class="col-sm-4 col-sm-offset-2 col-sm-push-4">
+                    {% else %}
+                    <div class="col-sm-4 col-sm-offset-2">
+                {% endif %}
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.subtitle }}</p>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                        {{ post.content }}
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+                        <small>{{post.gitstats}}</small>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+                        {% for button in post.buttons %}
+                            <a href="{{button.link}}" target="_blank" class="btn">{{button.name}}</a>
+                        {% endfor %}
+                    </div>
+                {% if thecycle == 'odd' %}
+                    <div class="col-sm-5 col-sm-pull-5">
+                    {% else %}
+                    <div class="col-sm-5">
+                {% endif %}
+                        <img alt="{{post.image.alt}}" class="img-responsive" src="{{site.baseurl}}/images/{{post.image.src}}">
+                    </div>
+                </article>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>

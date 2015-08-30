@@ -1,0 +1,16 @@
+#welcome{
+    height: 90vh;
+    width: 100vw;
+    .content{
+        @include vertical-align;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        h1{
+            font-family: $font-pacifico;
+            transform: rotate(-18deg);
+            margin-bottom: 35px;
+            font-size: 3em;
+        }
+    }
+}
