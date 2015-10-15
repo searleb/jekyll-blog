@@ -1,0 +1,17 @@
+footer{
+    margin-top: 90px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $gray-lighter;
+    ul{
+        padding-left: 0px;
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                font-size: 3rem;
+                padding-right: 5px;
+            }
+        }
+    }
+}

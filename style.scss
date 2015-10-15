@@ -1,12 +1,17 @@
 ---
 ---
-@import "variables";
-@import "typography";
-@import "mixins";
 
-// partials
-@import "home-welcome";
-@import "projects";
+// media queries: http://getbootstrap.com/css/#grid-media-queries
+$media-xs: '(max-width:767px)';
+$media-sm: '(min-width:768px)';
+$media-md: '(min-width:992px)';
+$media-lg: '(min-width:1200px)';
+
+@import "custom-bs-variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "header";
+@import "footer";
+@import "body";
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

@@ -1,0 +1,43 @@
+body{
+    .side-colour{
+        height: 100%;
+        width: 10px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        will-change: background-color;
+        display: none;
+        opacity: 0.8;
+        @media #{$media-sm}{
+            display: block;
+        }
+    }
+    .top-colour{
+        height: 10px;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        will-change: background-color;
+        text-align: right;
+        opacity: 0.8;
+        @media #{$media-sm}{
+            position: fixed;
+            z-index: 2;
+        }
+    }
+    #time{
+        color: transparentize($white, 0.65);
+        font-size: 10px;
+        padding-right: 5px;
+        position: relative;
+        top: -2px;
+    }
+    #hex{
+        @extend #time;
+        transform: rotate(90deg);
+        left: -2px;
+    }
+}

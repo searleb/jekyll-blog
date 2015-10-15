@@ -2,37 +2,23 @@
 layout: default
 ---
 
+<section class="welcome-note">
+    <h1>Welcome to my little piece of the web.</h1>
+    <h2>I am a web developer, currently coding in <s>New York</s> Sydney for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
+</section>
+
+
 <div class="projects">
-    {% for post in site.posts %}
-        {% if post.category == 'project' %}
-            <div class="row">
-                <article class="project">
-                {% capture thecycle %}{% cycle 'odd', 'even '%}{% endcapture %}
-                {% if thecycle == 'odd' %}
-                    <div class="col-sm-4 col-sm-offset-2 col-sm-push-4">
-                    {% else %}
-                    <div class="col-sm-4 col-sm-offset-2">
-                {% endif %}
-                        <h3>{{ post.title }}</h3>
-                        <p>{{ post.subtitle }}</p>
-
-                        {{ post.content }}
-
-                        <small>{{post.gitstats}}</small>
-
-                        {% for button in post.buttons %}
-                            <a href="{{button.link}}" target="_blank" class="btn">{{button.name}}</a>
-                        {% endfor %}
-                    </div>
-                {% if thecycle == 'odd' %}
-                    <div class="col-sm-5 col-sm-pull-5">
-                    {% else %}
-                    <div class="col-sm-5">
-                {% endif %}
-                        <img alt="{{post.image.alt}}" class="img-responsive" src="{{site.baseurl}}/images/{{post.image.src}}">
-                    </div>
-                </article>
-            </div>
-        {% endif %}
-    {% endfor %}
+    <small>Personal Projects</small>
+    <ul>
+        {% for post in site.posts %}
+            {% if post.category == 'project' %}
+            <li>
+                <h2>
+                    <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                </h2>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animated Bootstrap Burger Menu
-category: blog
+category: code
 tag: [burger menu, bootstrap, custom styles, animation]
 ---
 {% highlight html %}
@@ -13,7 +13,7 @@ tag: [burger menu, bootstrap, custom styles, animation]
 </button>
 {% endhighlight %}
 
-{% highlight css %}
+{% highlight scss %}
 .navbar-toggle{
     border: 0px;
     &:hover, &:focus, &:active{

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Styling Slick Slider Dots
-category: blog
+category: code
 tag: [slick, custom styles]
 ---
 
-{% highlight css %}
+{% highlight scss %}
 .slick-dots{
     margin-top: 70px;
     padding: 0px;
