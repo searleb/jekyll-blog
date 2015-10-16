@@ -3,14 +3,24 @@ $(document).ready(function() {
     	// get time
     	var newDate = new Date();
     	var hours = newDate.getHours().toString();
+
+        // add night-time class to body as early as possible
+        // if (hours >= 20 || hours <= 5) {
+        //     $('body').addClass('night-time');
+        //     var aColor = '#aaaaaa';
+        // } else {
+        //     $('body').removeClass('night-time');
+        //     var aColor = '#000000';
+        // }
+
     	var minutes = newDate.getMinutes().toString();
     	var seconds = newDate.getSeconds().toString();
 
     	// format time to HHMMSS
     	if (hours < 10) { hours = "0" + hours };
-    	if (minutes < 10) { minutes = "0" + minutes };
-    	if (seconds < 10) { seconds = "0" + seconds };
-    	var time = hours +":"+ minutes +":"+ seconds;
+    	if (minutes < 10) { minutes = "0" + minutes }
+    	if (seconds < 10) { seconds = "0" + seconds }
+    	var time = hours +":"+ minutes +":"+ seconds
 
     	// create dark (1-1) # color code
     	var darkColors = hours + minutes + seconds;
@@ -22,17 +32,17 @@ $(document).ready(function() {
 
     	// update the time on the page
     	$("#time").html(time + ' / #' + lightColors );
-    	// $("#hex").html('#' + lightColors);
 
     	// fade the background color
     	Velocity( $(".hex-colour"), { backgroundColor: '#' + lightColors }, 1000);
+        Velocity( $(".btn"), { borderColor: '#' + lightColors, color: '#' + lightColors }, 1000);
 
+        // change the hover colour for any links to match time hex
+        var aColor = '#000000';
         $('a').hover(function() {
-            /* Stuff to do when the mouse enters the element */
             $(this).css('color', '#'+lightColors);
         }, function() {
-            /* Stuff to do when the mouse leaves the element */
-            $(this).css('color', '#000000');
+            $(this).css('color', aColor);
         });
     }
 

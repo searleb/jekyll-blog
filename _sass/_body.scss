@@ -1,20 +1,31 @@
 body{
+    transition: all 1s;
+    h1, h2, h3, h4, h5{
+        letter-spacing: -1px;
+    }
+    &.night-time{
+        background-color: $gray-dark;
+        color: $gray-lighter;
+        a{
+            color: darken($gray-lighter, 27%);
+        }
+    }
     .side-colour{
         height: 100%;
-        width: 10px;
+        width: 15px;
         position: fixed;
         left: 0;
         top: 0;
         bottom: 0;
         will-change: background-color;
         display: none;
-        opacity: 0.8;
+        opacity: 0.7;
         @media #{$media-sm}{
             display: block;
         }
     }
     .top-colour{
-        height: 10px;
+        height: 15px;
         width: 100vw;
         position: absolute;
         top: 0;
@@ -30,7 +41,7 @@ body{
     }
     #time{
         color: transparentize($white, 0.65);
-        font-size: 10px;
+        font-size: 14px;
         padding-right: 5px;
         position: relative;
         top: -2px;
@@ -39,5 +50,8 @@ body{
         @extend #time;
         transform: rotate(90deg);
         left: -2px;
+    }
+    label{
+        font-weight: normal;
     }
 }
