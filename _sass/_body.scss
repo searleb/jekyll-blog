@@ -3,6 +3,11 @@ body{
     h1, h2, h3, h4, h5{
         letter-spacing: -1px;
     }
+    h1{
+        small{
+            display: block;
+        }
+    }
     &.night-time{
         background-color: $gray-dark;
         color: $gray-lighter;
@@ -19,7 +24,7 @@ body{
         bottom: 0;
         will-change: background-color;
         display: none;
-        opacity: 0.7;
+        opacity: 0.8;
         @media #{$media-sm}{
             display: block;
         }
@@ -53,5 +58,16 @@ body{
     }
     label{
         font-weight: normal;
+    }
+    .snippet{
+        margin-top: 40px;
+    }
+    .date{
+        color: $gray;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-bottom: 30px;
     }
 }

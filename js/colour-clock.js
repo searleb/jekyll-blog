@@ -31,7 +31,7 @@ $(document).ready(function() {
     	lightColors = lightColors.replace(/2/g, 'c');
 
     	// update the time on the page
-    	$("#time").html(time + ' / #' + lightColors );
+    	$("#time, .hex-clock > h1 > small").html(time + ' / #' + lightColors );
 
     	// fade the background color
     	Velocity( $(".hex-colour"), { backgroundColor: '#' + lightColors }, 1000);
