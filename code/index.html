@@ -1,0 +1,18 @@
+---
+layout: page
+title: Code Snippets
+subtitle: and such
+---
+
+<div class="code-snippets">
+    {% for post in site.posts %}
+        {% if post.category == 'code' %}
+            <article class="snippet">
+                <h3>{{ post.title }}</h3>
+
+                {{ post.content }}
+
+            </article>
+        {% endif %}
+    {% endfor %}
+</div>

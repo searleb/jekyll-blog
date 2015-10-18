@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="projects">
+    {% for post in site.posts %}
+        {% if post.category == 'code' %}
+            <div class="row">
+                <article class="project">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.subtitle }}</p>
+
+                        {{ post.content }}
+
+                        <small>{{post.gitstats}}</small>
+
+                        {% for button in post.buttons %}
+                            <a href="{{button.link}}" target="_blank" class="btn">{{button.name}}</a>
+                        {% endfor %}
+                    </div>
+                </article>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

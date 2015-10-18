@@ -1,51 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
 
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Chelsea+Market|Open+Sans|Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+</head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+<body>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+    <div class="side-colour hex-colour"></div>
+    <div class="top-colour hex-colour">
+        <div id="time"></div>
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <ul>
+                        <li>
+                            <a href="{{site.baseurl}}/">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/code">Code</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
+    <main id="main" role="main" class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                {{ content }}
+            </div>
+        </div>
+    </main>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                <footer class="footer">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/billsearle" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/searleb" target="_blank">
+                                <i class="fa fa-github-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Bill_Searle" target="_blank">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://codepen.io/searleb/" target="_blank">
+                                <i class="fa fa-codepen"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
     </div>
 
     {% include analytics.html %}
-  </body>
+
+    <script type="text/javascript" src="{{site.baseurl}}/js/velocity.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/js/colour-clock.js"></script>
+</body>
 </html>

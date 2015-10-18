@@ -2,17 +2,23 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<section class="welcome-note">
+    <h1>Hello,</h1>
+    <h2>I am a web developer, currently coding in <s>New York</s> Sydney <small><i>"mate"</i></small> for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
+</section>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="projects">
+    <small>Personal Projects</small>
+    <ul>
+        {% for post in site.posts %}
+            {% if post.category == 'project' %}
+            <li>
+                <h2>
+                    <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                </h2>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>

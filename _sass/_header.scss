@@ -1,0 +1,35 @@
+header{
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    text-transform: uppercase;
+    ul{
+        padding-left: 0px;
+        padding-top: 15px;
+        li{
+            list-style: none;
+            display: inline-block;
+            padding-right: 10px;
+            a{
+                font-size: 16px;
+                letter-spacing: -1px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.welcome-note{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.projects{
+    ul{
+        padding-left: 0px;
+        li{
+            list-style: none;
+        }
+    }
+}
