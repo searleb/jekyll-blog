@@ -70,4 +70,13 @@ body{
     p{
         margin-bottom: 30px;
     }
+    form{
+        margin-top: 50px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        box-shadow: none;
+    }
+    .form-control{
+        box-shadow: none;
+    }
 }
