@@ -1,0 +1,13 @@
+---
+layout: post
+title: SCSS Darken Color Function with Optional Amount
+category: code
+tag: [scss, function, color]
+---
+
+{% highlight scss %}
+// function which returns a darkened color with a default optional amount
+@function hoverColor($color, $amount:8%) {
+    @return darken($color, $amount);
+}
+{% endhighlight %}
