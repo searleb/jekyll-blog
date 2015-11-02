@@ -34,8 +34,17 @@ $(document).ready(function() {
     	$("#time, .hex-clock > h1 > small").html(time + ' / #' + lightColors );
 
     	// fade the background color
-    	Velocity( $(".hex-colour"), { backgroundColor: '#' + lightColors }, 1000);
-        Velocity( $(".btn"), { borderColor: '#' + lightColors, color: '#' + lightColors }, 1000);
+        $('.hex-colour').velocity({
+            backgroundColor: '#' + lightColors
+        }, {
+            duration: 1000
+        });
+        $('.btn').velocity({
+            borderColor: '#' + lightColors,
+            color: '#' + lightColors
+        }, {
+            duration: 1000
+        });
 
         // change the hover colour for any links to match time hex
         var aColor = '#000000';

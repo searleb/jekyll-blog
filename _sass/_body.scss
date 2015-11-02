@@ -20,6 +20,9 @@ body{
             vertical-align: super;
             font-size: 70%;
         }
+        .animate-me{
+            opacity: 0;
+        }
     }
     &.night-time{
         background-color: $gray-dark;
