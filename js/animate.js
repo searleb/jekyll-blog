@@ -1,22 +1,48 @@
+$(document).ready(function() {
 
-function showWork(argument) {
-    var $element = $('.animate-me');
-    var time = 100;
+    var $elements = $('.animate-me'),
+    duration = 400, // animation duration
+    delay = 35; // delay multiplier
 
-    $element.each(function(index, el) {
-        $(this)
-        .delay(index * 90)
-        .velocity({
-            opacity: 1
-        }, {
-            duration: time
+    function showWork(opacity) {
+        $elements.each(function(index, el) {
+            $(this)
+            .delay(index * delay)
+            .velocity({
+                opacity: 1
+            }, {
+                duration: duration
+            });
         });
-        time  = time + 100;
-    });
-}
-
-$(window).scroll(function(event) {
-    if ($('.projects h1').visible()) {
-        showWork();
     }
+    setTimeout(showWork, 500);
+
+    function hideWork(url) {
+        $( $elements.get().reverse() )
+        .each(function(index, el) {
+            $(this)
+            .delay(index * delay)
+            .velocity({
+                opacity: 0
+            }, {
+                duration: duration,
+                complete: function(){
+                    window.location = url;
+                },
+                progress: function(elements, complete, remaining, start, tweenValue) {
+                    console.log((complete * 100) + "%");
+                    console.log(remaining + "ms remaining!");
+                    console.log("The current tween value is " + tweenValue)
+                }
+            });
+        });
+    }
+
+    // var $links = $('.projects a');
+    // $links.click(function(event) {
+    //     event.preventDefault();
+    //     var url = $(this).attr('href');
+    //     hideWork(url);
+    // });
+
 });
