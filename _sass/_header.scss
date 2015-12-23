@@ -23,6 +23,14 @@ header{
 .welcome-note{
     margin-top: 10vh;
     margin-bottom: 10vh;
+    h2{
+        small{
+            vertical-align: text-top;
+            position: absolute;
+            transform: translate(-44px, 0px);
+            font-size: 35%;
+        }
+    }
 }
 
 .projects{
