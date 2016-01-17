@@ -1,0 +1,13 @@
+.slick-slider{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   .slick-prev, .slick-next{
+      &:before{
+         color: $text-color;
+      }
+   }
+}
+
+img{
+   margin: 50px 0px;
+}

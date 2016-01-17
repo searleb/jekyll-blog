@@ -12,6 +12,7 @@ $media-lg: '(min-width:1200px)';
 @import "header";
 @import "footer";
 @import "body";
+@import "posts";
 
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
