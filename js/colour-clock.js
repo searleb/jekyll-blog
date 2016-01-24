@@ -17,10 +17,10 @@ $(document).ready(function() {
     	var seconds = newDate.getSeconds().toString();
 
     	// format time to HHMMSS
-    	if (hours < 10) { hours = "0" + hours };
+    	if (hours < 10) { hours = "0" + hours }
     	if (minutes < 10) { minutes = "0" + minutes }
     	if (seconds < 10) { seconds = "0" + seconds }
-    	var time = hours +":"+ minutes +":"+ seconds
+    	var time = hours +":"+ minutes +":"+ seconds;
 
     	// create dark (1-1) # color code
     	var darkColors = hours + minutes + seconds;
@@ -47,10 +47,12 @@ $(document).ready(function() {
         });
 
         // change the hover colour for any links to match time hex
-        var aColor = '#000000';
+        var aColor = '#000000'; // default non hover colour
         $('a').hover(function() {
+           // set hover colour
             $(this).css('color', '#'+lightColors);
         }, function() {
+           // return to default off hover colour
             $(this).css('color', aColor);
         });
     }
