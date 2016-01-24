@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var $elements = $('.animate-me'),
-    duration = 400, // animation duration
+    duration = 1000, // animation duration
     delay = 35; // delay multiplier
 
     function showWork(opacity) {
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 progress: function(elements, complete, remaining, start, tweenValue) {
                     console.log((complete * 100) + "%");
                     console.log(remaining + "ms remaining!");
-                    console.log("The current tween value is " + tweenValue)
+                    console.log("The current tween value is " + tweenValue);
                 }
             });
         });
