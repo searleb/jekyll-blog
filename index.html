@@ -13,8 +13,8 @@ layout: default
        <h1>Work</h1>
        <hr>
        <ul>
-           {% for post in site.posts %}
-               {% if post.category == 'project' %}
+           {% assign posts = site.posts | sort: 'category' %}
+           {% for post in posts %}
                <li class="animate-me">
                    <h2>
                       {% if post.link %}
@@ -25,9 +25,8 @@ layout: default
                    </h2>
                    <small><i>{{post.cat-type}}</i></small>
                </li>
-               {% endif %}
            {% endfor %}
        </ul>
    </div>
-   
+
 </div>
