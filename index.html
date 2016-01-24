@@ -1,26 +1,33 @@
 ---
 layout: default
 ---
+<div class="home">
 
-<section class="welcome-note">
-    <h1>Hello,</h1>
-    <h2>I am a web developer, currently coding in <s>New York</s> Sydney <small><i>"mate"</i></small> for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
-</section>
+   <section class="welcome-note">
+       <h1>Hello,</h1>
+       <h2>I am a front end web developer, currently coding in <s>New York</s> Sydney <small><i>"mate"</i></small> for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
+   </section>
 
 
-<div class="projects">
-    <h1>Work</h1>
-    <hr>
-    <ul>
-        {% for post in site.posts %}
-            {% if post.category == 'project' %}
-            <li class="animate-me">
-                <h2>
-                    <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-                </h2>
-                <small><i>{{post.cat-type}}</i></small>
-            </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+   <div class="projects">
+       <h1>Work</h1>
+       <hr>
+       <ul>
+           {% for post in site.posts %}
+               {% if post.category == 'project' %}
+               <li class="animate-me">
+                   <h2>
+                      {% if post.link %}
+                         <a href="{{post.link}}" target="_blank">{{post.title}}</a>
+                      {% else %}
+                         <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                      {% endif %}
+                   </h2>
+                   <small><i>{{post.cat-type}}</i></small>
+               </li>
+               {% endif %}
+           {% endfor %}
+       </ul>
+   </div>
+   
 </div>
