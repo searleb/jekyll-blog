@@ -44,7 +44,8 @@ body{
    .projects{
       margin-bottom: 90px;
       h2{
-         margin-top: 5px;
+         margin-top: 25px;
+         line-height: 0.9;
       }
       small{
          color: $gray-light;
@@ -64,16 +65,15 @@ body{
    }
    .side-colour{
       height: 100%;
-      width: 15px;
+      width: 10px;
       position: fixed;
       left: 0;
       top: 0;
       bottom: 0;
       will-change: background-color;
-      display: none;
       opacity: 0.8;
       @media #{$media-sm}{
-         display: block;
+         width: 15px;
       }
    }
    .top-colour{
