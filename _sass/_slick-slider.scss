@@ -4,3 +4,9 @@
       margin: auto;
    }
 }
+.slick-next, .slick-prev{
+   display: none !important;
+   @media #{$media-sm}{
+      display: block !important;
+   }
+}
