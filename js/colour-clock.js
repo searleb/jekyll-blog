@@ -37,20 +37,21 @@ $(document).ready(function() {
         $('.hex-colour').velocity({
             backgroundColor: '#' + lightColors
         }, {
-            duration: 1000
+            duration: 900
         });
-        $('.btn').velocity({
-            borderColor: '#' + lightColors,
-            color: '#' + lightColors
-        }, {
-            duration: 1000
-        });
+
+      //   $('.btn').velocity({
+      //       borderColor: '#' + lightColors,
+      //       color: '#' + lightColors
+      //   }, {
+      //       duration: 900
+      //   });
 
         // change the hover colour for any links to match time hex
         var aColor = '#000000'; // default non hover colour
         $('a').hover(function() {
            // set hover colour
-            $(this).css('color', '#'+lightColors);
+            $(this).css('color', '#' + lightColors);
         }, function() {
            // return to default off hover colour
             $(this).css('color', aColor);
@@ -59,7 +60,7 @@ $(document).ready(function() {
 
     setInterval(function(){
     	colorClock();
-    },1000);
+   }, 1000);
 
     colorClock();
 });
