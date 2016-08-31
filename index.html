@@ -10,7 +10,8 @@ layout: default
 
 
    <div class="projects">
-       <h1>Commercial</h1>
+       <h1 id="commercial">Commercial</h1>
+       <small><i>Mentally Friendly</i></small>
        <hr>
        <ul>
           {% for post in site.posts %}
@@ -23,7 +24,7 @@ layout: default
                          <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
                       {% endif %}
                    </h2>
-                   <!-- <small><i>{{post.cat-type}}</i></small> -->
+                   <small><i>{{post.details}}</i></small>
                </li>
                {% endif%}
            {% endfor %}
@@ -31,7 +32,7 @@ layout: default
     </div>
 
     <div class="projects">
-       <h1>Personal</h1>
+       <h1 id="personal">Personal</h1>
       <hr>
       <ul>
          {% for post in site.posts %}
@@ -44,7 +45,7 @@ layout: default
                         <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
                      {% endif %}
                  </h2>
-                 <!-- <small><i>{{post.cat-type}}</i></small> -->
+                 <small><i>{{post.details}}</i></small>
               </li>
               {% endif%}
          {% endfor %}
@@ -52,7 +53,7 @@ layout: default
    </div>
 
    <div class="projects">
-          <h1>Freelance</h1>
+          <h1 id="freelance">Freelance</h1>
          <hr>
          <ul>
             {% for post in site.posts %}
@@ -65,7 +66,7 @@ layout: default
                            <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
                         {% endif %}
                     </h2>
-                    <!-- <small><i>{{post.cat-type}}</i></small> -->
+                    <small><i>{{post.details}}</i></small>
                  </li>
                  {% endif%}
             {% endfor %}
