@@ -1,21 +1,18 @@
 ---
 layout: default
 ---
-<div class="home">
-
-  <section class="welcome-note">
-    <h1>Hello,</h1>
-    <h2>I'm a front end web developer, currently coding in <s>New York</s> Sydney <small><i>"mate"</i></small> for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
-  </section>
-
-
-  <div class="projects">
+<p>
+  Below are some of the things I've built over the years, hanging around for posterity.
+  <br />
+  May be broken and/or dead.
+</p>
+<div class="projects">
     <h1 id="commercial">Commercial</h1>
     <small><i>Mentally Friendly</i></small>
     <hr>
     <ul>
       {% for post in site.posts %}
-        {% if post.category == 'mf' and post.archive != true %}
+        {% if post.category == 'mf' and post.archive %}
         <li class="animate-me">
           <h2>
             {% if post.link %}
@@ -36,7 +33,7 @@ layout: default
     <hr>
     <ul>
       {% for post in site.posts %}
-        {% if post.category == 'personal' and post.archive != true %}
+        {% if post.category == 'personal' and post.archive %}
         <li class="animate-me">
           <h2>
             {% if post.link %}
@@ -52,4 +49,23 @@ layout: default
     </ul>
   </div>
 
+<div class="projects">
+  <h1 id="freelance">Freelance</h1>
+  <hr>
+  <ul>
+    {% for post in site.posts %}
+    {% if post.category == 'freelance' and post.archive %}
+    <li class="animate-me">
+      <h2>
+        {% if post.link %}
+        <a href="{{post.link}}" target="_blank">{{post.title}}</a>
+        {% else %}
+        <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+        {% endif %}
+      </h2>
+      <small><i>{{post.details}}</i></small>
+    </li>
+    {% endif%}
+    {% endfor %}
+  </ul>
 </div>
