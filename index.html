@@ -5,13 +5,17 @@ layout: default
 
   <section class="welcome-note">
     <h1>Hello,</h1>
-    <h2>I'm a front end web developer, currently coding in <s>New York</s> Sydney <small><i>"mate"</i></small> for <a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly</a>.</h2>
+    <h2>
+      I'm a front end web developer, currently 
+      <s>coding in New York</s> 
+      freelancing in Sydney <small><i>"mate"</i></small> for 
+      <s><a href="http://mentallyfriendly.com" target="_blank">Mentally Friendly.</a></s> 
+      <a href="https://www.southerncrossaustereo.com.au/" target="_blank"> Southern Cross Austereo.</a>
+    </h2>
   </section>
-
 
   <div class="projects">
     <h1 id="commercial">Commercial</h1>
-    <small><i>Mentally Friendly</i></small>
     <hr>
     <ul>
       {% for post in site.posts %}
@@ -24,7 +28,9 @@ layout: default
             <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
             {% endif %}
           </h2>
-          <small><i>{{post.details}}</i></small>
+          <small>
+            <i>{{post.details}}</i>
+          </small>
         </li>
         {% endif%}
       {% endfor %}
