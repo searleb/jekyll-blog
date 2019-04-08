@@ -37,7 +37,7 @@ $(document).ready(function() {
         $('.hex-colour').velocity({
             backgroundColor: '#' + lightColors
         }, {
-            duration: 900
+            duration: 800
         });
 
       //   $('.btn').velocity({
