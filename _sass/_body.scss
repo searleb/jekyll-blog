@@ -11,6 +11,9 @@ body{
    h2{
       margin-bottom: 0px;
    }
+   s {
+      opacity: 0.95;
+   }
    .home, small{
       a{
          &[target='_blank']{
